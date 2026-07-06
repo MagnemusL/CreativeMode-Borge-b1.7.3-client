@@ -1,0 +1,16 @@
+.idea/
+.settings/
+.vscode/
+bin/
+game/
+jars/
+md5/
+reobf/
+src/net/minecraft/
+src/net/minecraftborge/
+src_original/
+.classpath
+.project
+Client.launch
+minecraft.iml
+sources.txt
