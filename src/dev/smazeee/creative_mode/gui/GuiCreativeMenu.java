@@ -16,7 +16,7 @@ public class GuiCreativeMenu extends GuiContainer {
     @Override
     public void initGui() {
         super.initGui();
-        this.xSize = 176;
+        this.xSize = 198;
         this.ySize = 198;
     }
 
@@ -28,9 +28,6 @@ public class GuiCreativeMenu extends GuiContainer {
         int x = (this.width - this.xSize) / 2;
         int y = (this.height - this.ySize) / 2;
         this.drawTexturedModalRect(x, y, 0, 0, this.xSize, this.ySize);
-
-
-        //GL11.glEnable(GL12.GL_RESCALE_NORMAL);
     }
 
     @Override

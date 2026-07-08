@@ -26,7 +26,7 @@ public class MenuInventory implements IInventory {
 
     @Override
     public int getSizeInventory() {
-        return 81;
+        return 82;
     }
 
     @Override
@@ -34,7 +34,7 @@ public class MenuInventory implements IInventory {
         int id = slot + scroll * 9;
         if (id >= CreativeMode.cachedItemList.size()) return null;
 
-        return CreativeMode.cachedItemList.get(id);
+        return slot == 0 ? null : CreativeMode.cachedItemList.get(id).copy(); // make sure the trashcan slot doesn't have anything in it
     }
 
     @Override
