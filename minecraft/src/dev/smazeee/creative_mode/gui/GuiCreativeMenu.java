@@ -52,16 +52,9 @@ public class GuiCreativeMenu extends GuiContainer {
     @Override
     public void handleMouseInput() {
         super.handleMouseInput();
-
         int dw = Mouse.getEventDWheel();
-        if (dw != 0) System.out.println("DWheel: " + dw);
 
-        if (dw < 0) {
-            menuInventory.incrementScroll();
-        }
-
-        if (dw > 0) {
-            menuInventory.decreaseScroll();
-        }
+        if (dw < 0) menuInventory.incrementScroll();
+        if (dw > 0) menuInventory.decreaseScroll();
     }
 }

@@ -31,7 +31,7 @@ public class MenuInventory implements IInventory {
 
     @Override
     public ItemStack getStackInSlot(int slot) {
-        int id = slot + scroll * 9;
+        int id = slot + scroll * 9 - 1; // -1 ensures that the trashcan slot gets ignored
         if (id >= CreativeMode.cachedItemList.size()) return null;
 
         return slot == 0 ? null : CreativeMode.cachedItemList.get(id).copy(); // make sure the trashcan slot doesn't have anything in it
