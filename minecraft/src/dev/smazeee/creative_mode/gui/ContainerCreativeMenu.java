@@ -22,12 +22,19 @@ public class ContainerCreativeMenu extends Container {
         if (slotId < 0 || slotId >= this.slots.size()) return super.clickGuiSlot(slotId, type, shift, player);
         if (slotId >= 82) return super.clickGuiSlot(slotId, type, shift, player); // hotbar slots
 
-        Slot slot = this.slots.get(slotId);
+        Slot slot = this.getSlot(slotId);
         InventoryPlayer inventory = player.inventory;
         ItemStack slotStack = slot.getStack();
         ItemStack inventoryStack = inventory.getItemStack();
 
         if (slotId == 0) {
+            if (shift) {
+                for (int i = 82; i < 91; ++i) {
+                    Slot hotbarSlot = this.getSlot(i);
+                    hotbarSlot.putStack(null);
+                }
+            }
+
             player.inventory.setItemStack(null);
             return null;
         }

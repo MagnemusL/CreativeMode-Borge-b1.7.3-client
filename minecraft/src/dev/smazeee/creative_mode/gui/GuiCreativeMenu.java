@@ -6,7 +6,6 @@ import org.lwjgl.input.Mouse;
 import org.lwjgl.opengl.GL11;
 
 public class GuiCreativeMenu extends GuiContainer {
-    private static final RenderItem itemRenderer = new RenderItem();
     private final MenuInventory menuInventory;
 
     public GuiCreativeMenu(InventoryPlayer inventory, MenuInventory menuInventory) {

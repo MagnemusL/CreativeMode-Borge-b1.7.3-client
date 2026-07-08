@@ -4,14 +4,15 @@ import dev.smazeee.creative_mode.gui.CreativeRemoteGUI;
 import dev.smazeee.creative_mode.gui.GuiCreativeMenu;
 import dev.smazeee.creative_mode.gui.MenuInventory;
 import net.minecraft.client.Minecraft;
-import net.minecraft.src.*;
+import net.minecraft.src.Block;
+import net.minecraft.src.Item;
+import net.minecraft.src.ItemStack;
 import net.minecraftborge.loader.event.EventBusSubscriber;
 import net.minecraftborge.loader.event.EventHandler;
 import net.minecraftborge.loader.event.IModLifecycleListener;
 import net.minecraftborge.loader.event.lifecycle.ModInitializationEvent;
 import net.minecraftborge.loader.event.world.WorldTickEvent;
 import org.lwjgl.input.Keyboard;
-import sun.awt.AWTAccessor;
 
 import java.util.ArrayList;
 
