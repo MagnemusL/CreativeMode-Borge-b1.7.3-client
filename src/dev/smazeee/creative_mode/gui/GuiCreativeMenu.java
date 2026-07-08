@@ -2,6 +2,7 @@ package dev.smazeee.creative_mode.gui;
 
 import net.minecraft.src.*;
 import org.lwjgl.input.Keyboard;
+import org.lwjgl.input.Mouse;
 import org.lwjgl.opengl.GL11;
 
 public class GuiCreativeMenu extends GuiContainer {
@@ -47,5 +48,21 @@ public class GuiCreativeMenu extends GuiContainer {
         }
 
         super.handleKeyboardInput();
+    }
+
+    @Override
+    public void handleMouseInput() {
+        super.handleMouseInput();
+
+        int dw = Mouse.getEventDWheel();
+        if (dw != 0) System.out.println("DWheel: " + dw);
+
+        if (dw < 0) {
+            menuInventory.incrementScroll();
+        }
+
+        if (dw > 0) {
+            menuInventory.decreaseScroll();
+        }
     }
 }
